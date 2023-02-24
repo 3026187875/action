@@ -18,7 +18,7 @@ jobs:
         id: release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: 20231207-1024
+          tag_name: ${{ steps.time.outputs.time }}
           body_path: README.md
           token: ${{ secrets.GITHUB_TOKEN }}
           target_commitish: main
@@ -50,5 +50,5 @@ jobs:
           branch: ${{ matrix.BRANCH }}
           board: ${{ matrix.BOARD }}
           flavor: ${{ matrix.FLAVOR }}
-          release-id: 20231207-1024
+          release-id: ${{ needs.prepare_release.outputs.release_id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
