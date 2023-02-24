@@ -2,7 +2,7 @@ name: armbian-5b
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   prepare_release:
     runs-on: ubuntu-latest
