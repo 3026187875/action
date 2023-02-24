@@ -50,5 +50,5 @@ jobs:
           branch: ${{ matrix.BRANCH }}
           board: ${{ matrix.BOARD }}
           flavor: ${{ matrix.FLAVOR }}
-          release-id: ${{ needs.prepare_release.outputs.release_id }}
+          release-id: 20231207-1024
           github-token: ${{ secrets.GITHUB_TOKEN }}
