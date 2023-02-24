@@ -14,15 +14,15 @@ jobs:
         uses: nanzm/get-time-action@v1.1
         with:
           format: 'YYYYMMDD-HHmm'
-      # - name: Create empty release
-      #   id: release
-      #   uses: softprops/action-gh-release@v1
-      #   with:
-      #     tag_name: ${{ steps.time.outputs.time }}
-      #     body_path: README.md
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     target_commitish: main
-      #     draft: false
+      - name: Create empty release
+        id: release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: 20231207-1024
+          body_path: README.md
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_commitish: main
+          draft: false
     outputs:
       release_id: ${{ steps.release.outputs.id }}
   build:
